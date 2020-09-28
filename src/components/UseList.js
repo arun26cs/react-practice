@@ -5,9 +5,14 @@ const UserList = (props) => {
     console.log('props', props);
     //const users = this.props.users;
     const userlistmap = users.map(user => {
-        return (
-            <p key={user.id}> this is {user.name} aged {user.age} having {user.belt} belt</p>
-        );
+        if(user.age>21){
+            return (
+                <p key={user.id}> this is {user.name} aged {user.age} having {user.belt} belt</p>
+            );
+        }else{
+            return null;
+        }
+         
     })
     return (
         <div>
