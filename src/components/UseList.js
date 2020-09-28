@@ -1,18 +1,13 @@
 import React, { Component } from 'react';
 
 const UserList = (props) => {
-    const users = props.users; 
+    const users = props.users;
     console.log('props', props);
     //const users = this.props.users;
     const userlistmap = users.map(user => {
-        if(user.age>21){
-            return (
-                <p key={user.id}> this is {user.name} aged {user.age} having {user.belt} belt</p>
-            );
-        }else{
-            return null;
-        }
-         
+        return user.age > 21 ? (
+            <p key={user.id}> this is {user.name} aged {user.age} having {user.belt} belt</p>
+        ) : null;
     })
     return (
         <div>
