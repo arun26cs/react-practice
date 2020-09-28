@@ -15,6 +15,7 @@ class App extends Component {
   addNinjas = (user)=>{
     let userstemp = [...this.state.users];
     userstemp.push(user);
+    console.log(userstemp)
     this.setState(
       {
         users:userstemp
